@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đang xử lý đăng nhập...</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    </style>
+</head>
+<body>
+    <p>Đang chuyển hướng, vui lòng đợi...</p>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Lấy token từ thanh địa chỉ (URL)
+            const params = new URLSearchParams(window.location.search);
+            const token = params.get('token');
+
+            if (token) {
+                // Nếu có token, lưu nó vào localStorage
+                localStorage.setItem('authToken', token);
+                // Chuyển hướng đến trang dashboard
+                window.location.href = 'dashboard.html';
+            } else {
+                // Nếu không có token, báo lỗi và quay về trang đăng nhập
+                alert('Xác thực thất bại. Vui lòng thử lại.');
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>

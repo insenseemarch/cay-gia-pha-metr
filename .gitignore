@@ -1,0 +1,9 @@
+# Thư viện và các gói phụ thuộc
+node_modules
+
+# File biến môi trường (chứa mật khẩu, API key)
+.env
+
+# Các file log
+npm-debug.log
+*.log

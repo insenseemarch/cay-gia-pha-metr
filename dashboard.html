@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng điều khiển - Cây Gia Phả</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <img src="images/logo.png" alt="Cây Gia Phả Logo" class="logo">
+        <h1>Chào mừng bạn!</h1>
+        <p>Hãy bắt đầu hành trình kết nối với gia đình của mình.</p>
+
+        <div class="options-container">
+            <button id="show-create-form" class="btn btn-primary">Tạo cây mới</button>
+            <button id="show-join-form" class="btn btn-secondary">Gia nhập cây có sẵn</button>
+        </div>
+
+        <div id="create-tree-section" class="form-section" style="display: none;">
+            <form id="create-tree-form">
+                <h3>Thông tin cây gia phả mới</h3>
+                <div class="input-group">
+                    <label for="tree-name">Tên cây gia phả</label>
+                    <input type="text" id="tree-name" placeholder="VD: Gia phả họ Nguyễn" required>
+                </div>
+                <div class="input-group">
+                    <label for="tree-description">Mô tả (tùy chọn)</label>
+                    <textarea id="tree-description" rows="3" placeholder="Một vài dòng giới thiệu về cây..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Xác nhận tạo cây</button>
+            </form>
+        </div>
+
+        <div id="join-tree-section" class="form-section" style="display: none;">
+            <form id="join-tree-form">
+                <h3>Gia nhập bằng ID</h3>
+                <div class="input-group">
+                    <label for="tree-id">Nhập ID cây gia phả</label>
+                    <input type="text" id="shareable-id" placeholder="Nhập ID được chia sẻ" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Xác nhận gia nhập</button>
+            </form>
+        </div>
+
+        <p id="dashboard-message" class="message"></p>
+        
+        <button id="logout-btn" class="btn-logout">Đăng xuất</button>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

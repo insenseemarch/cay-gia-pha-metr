@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tham gia Cây Gia Phả</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="videos/bg_2.mp4" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ video.
+    </video>
+
+    <div class="auth-container">
+        <img src="images/logo.png" alt="Cây Gia Phả Logo" class="logo">
+
+        <form id="login-form" class="auth-form">
+            <h2>Đăng nhập</h2>
+            <div class="input-group">
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" placeholder="email@example.com" required>
+            </div>
+            <div class="input-group">
+                <label for="login-password">Mật khẩu</label>
+                <input type="password" id="login-password" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+            <p class="form-switch">Chưa có tài khoản? <a href="#" id="show-register">Đăng ký ngay</a></p>
+        </form>
+
+        <form id="register-form" class="auth-form" style="display: none;">
+            <h2>Đăng ký tài khoản</h2>
+            <div class="input-group">
+                <label for="register-email">Email</label>
+                <input type="email" id="register-email" placeholder="email@example.com" required>
+            </div>
+            <div class="input-group">
+                <label for="register-password">Mật khẩu</label>
+                <input type="password" id="register-password" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Đăng ký</button>
+            <p class="form-switch">Đã có tài khoản? <a href="#" id="show-login">Đăng nhập</a></p>
+        </form>
+        
+        <div class="separator"><span>hoặc tiếp tục với</span></div>
+        
+        <div class="social-login">
+            <button id="google-btn" class="btn social-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google logo">
+                Google
+            </button>
+            <button id="facebook-btn" class="btn social-btn">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook logo" style="width: 20px; height: 20px;">
+                Facebook
+            </button>
+        </div>
+        <p id="auth-message" class="message"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
